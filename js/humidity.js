@@ -9,7 +9,7 @@ function enterValue( arg ){
 
 function delValue(){
 	formval = formval.substring(0, formval.length - 1);
-	document.getElementById("HumidityForm").value = formval;
+	document.getElementById("HumidityForm").innerHTML = formval;
 }
 
 function submitValue(){
