@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="../css/humidity.css" media="screen" />
+  <script src="../js/humidity.js" type="text/javascript"></script>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HMI</title>
+  </head>
+  <body>
+    <h1 class="screenname">Humidity</h1>
+    <div class="container">
+        <form class="form-horizontal" role="form">
+              <input type="text" class="form-control" placeholder="Enter Humidity" id="HumidityForm"></input>
+        </form>
+      <table class="keypad">
+          <tr class="key-row">
+            <td class="key-cell">
+              <button class="btn btn-default key" type="button" onclick="enterValue('7')">7</button>
+            </td>
+            <td class="key-cell">
+              <button class="btn btn-default key" type="button" onclick="enterValue('8')">8</button>
+            </td>
+            <td class="key-cell">
+              <button class="btn btn-default key" type="button" onclick="enterValue('9')">9</button>
+            </td>
+          </tr>
+          <tr class="key-row">
+            <td class="key-cell">
+              <button class="btn btn-default key" type="button" onclick="enterValue('4')">4</button>
+            </td>
+            <td class="key-cell">
+              <button class="btn btn-default key" type="button" onclick="enterValue('5')">5</button>
+            </td>
+            <td class="key-cell">
+              <button class="btn btn-default key" type="button" onclick="enterValue('6')">6</button>
+            </td>
+          </tr>
+          </tr>
+          <tr class="key-row">
+            <td class="key-cell">
+              <button class="btn btn-default key" type="button" onclick="enterValue('1')">1</button>
+            </td>
+            <td class="key-cell">
+              <button class="btn btn-default key" type="button" onclick="enterValue('2')">2</button>
+            </td>
+            <td class="key-cell">
+              <button class="btn btn-default key" type="button" onclick="enterValue('3')">3</button>
+            </td>
+          </tr>
+          <tr class="key-row">
+            <td class="key-cell">
+              <button class="btn btn-default key" type="button" onclick="delValue()">Del</button>
+            </td>
+            <td class="key-cell">
+              <button class="btn btn-default key" type="button" onclick="enterValue('0')">0</button>
+            </td>
+            <td class="key-cell">
+              <button class="btn btn-default key" type="button" onclick="submitValue()"><span class = "glyphicon glyphicon-arrow-right"></span></button>
+            </td>  
+        </table>
+        <div>
+          <h4>Current Humidity:</h4></br>
+          <div class="col-md-1" id="humidityDisplay"><script>displayValue();</script></div>
+        </div>
+      </div>
+    <div class="bottombar">
+                <a href="#"> <div id="home"></div></a>
+                <a href="#"><div id="lockbutton"></div></a>
+    </div>
+  </body>
+</html>
