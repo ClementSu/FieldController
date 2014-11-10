@@ -1,0 +1,88 @@
+body{
+	border: solid black 1px;
+	width: 480px;
+	height: 272px;
+}
+
+
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .screenname{
+    background-color: rgb(102, 228, 102);
+    width: 479px;
+    margin-top: 0px;
+    text-indent: 5px;
+    color: white;
+    font-family: monospace;
+  }
+  .navbar{
+    width: 56px;
+    height: 56px;
+  }
+  .navbar-nav{
+
+  }
+.bottombar{
+    position: absolute;
+    top: 240px;
+  }
+#home{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: url('../img/home.png');
+    background-repeat: no-repeat;
+    margin-left: 2px;
+    float: left;
+    margin-right: 414px;
+  }
+
+  #lockbutton{
+    width:30px;
+    height:30px;
+    position: absolute;
+    left: 446px;
+    background: url('../img/lock.png');
+    background-repeat: no-repeat;
+    float: left;
+
+  }
+  #settings {
+left: 260px;
+width: 64px;
+background: url('img/setting.png');
+}
+
+
+  
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+    width: 480px;
+  	height: 272px;
+
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+  }
+  .sidebar-nav .navbar ul:not {
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 5px;
+    padding-bottom: 12px;
+  }
+
+  li{
+    width: 240px;
+  }
+}
+
+
+
+
+

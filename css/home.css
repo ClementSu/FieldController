@@ -1,0 +1,69 @@
+@media (min-width: 768px) {
+  .screenname{
+    background-color: rgb(102, 228, 102);
+    width: 479px;
+    margin-top: 0px;
+    text-indent: 5px;
+    color: white;
+    font-family: monospace;
+  }
+
+#points{
+left: 100px;
+width: 128px;
+background: url('../img/points.png');
+}
+
+  #lockbutton{
+ 
+    width:30px;
+    height:30px;
+    background: url('../img/lock.png');
+    background-repeat: no-repeat;
+    float: left;
+
+  }
+  
+.bottombar{
+    position: relative;
+	left: 446px;
+    top: 190px;
+}
+  
+
+#settings {
+left: 260px;
+width: 128px;
+background: url('../img/setting.png');
+}
+
+
+#navlist {
+    position: relative;
+}
+
+#navlist li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 40px;
+}
+
+#navlist li, #navlist a {
+    height: 128px;
+    display: block;
+	}
+
+.myfont {
+font-family: monospace;
+color: green;
+}
+
+body {
+	border-collapse: collapse;
+	border: 1px solid black;
+	width: 480px;
+	height: 272px;
+	}
+	}
