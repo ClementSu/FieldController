@@ -7,6 +7,7 @@ body {
 	}
 
 /* Disable text highlighting */
+/*
 * {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -15,4 +16,4 @@ body {
     -ms-user-select: none;
     user-select: none;
     cursor: none;
-}
+}*/

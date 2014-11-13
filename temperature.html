@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="dist/js/jquery-2.1.1.min.js"></script> 
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css" media="screen" />
   	<link rel="stylesheet" type="text/css" href="css/common.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="css/temperature.css" media="screen" />
@@ -12,10 +13,10 @@
     <title>HMI</title>
   </head>
   <body>
-    <h1 class="screenname">Temperature</h1>
+    <h1 class="screenname">Rm 113 Lighting</h1>
     <div class="container">
         <form class="form-horizontal" role="form">
-              <input type="text" class="form-control" placeholder="Enter Temperature" id="TemperatureForm"></input>
+              <input type="text" class="form-control" placeholder="Enter Lightning" id="TemperatureForm"></input>
         </form>
       <table class="keypad">
           <tr class="key-row">
@@ -64,8 +65,8 @@
             </td>  
         </table>
         <div>
-          <h4>Current Temperature:</h4></br>
-          <div class="col-md-1" id="temperatureDisplay"><script>displayValue();</script></div>
+          <h4>Current Lighting:</h4></br>
+          <div class="col-md-3" id="temperatureDisplay"></div>
         </div>
       </div>
     <div class="bottombar">

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+   <script src="dist/js/jquery-2.1.1.min.js"></script> 
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css" media="screen" />
   	<link rel="stylesheet" type="text/css" href="css/common.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="css/pointscreen.css" media="screen" />
   <script src="js/pointscreen.js" type="text/javascript"></script>
+
     <title>HMI</title>
   </head>
 
@@ -18,14 +20,26 @@
   <td  class = "AlignRight"> 9:42 am </td>
   </table>
 
-   <table>        
+   <table> 
           <tr>
-            <td class = "BigTableElement"><a href="humidity.html"> Humidity </a></td>
-            <td class = "SmallTableElement" id = "humidity"><script>displayHum()</script></td>
+            <td class = "BigTableElement" id="s1"></td>
+            <td class = "SmallTableElement" id = "s11"></td>
+          </tr>       
+          <tr>
+            <td class = "BigTableElement" id="s2"></td>
+            <td class = "SmallTableElement" id = "s22"></td>
           </tr>
           <tr>
-            <td class = "BigTableElement"><a href="temperature.html">Temperature</a></td>
-            <td class = "SmallTableElement" id = "temperature"><script>displayTemp()</script></td>
+            <td class = "BigTableElement"><a href ="temperature.html" id="s3"></a></td>
+            <td class = "SmallTableElement" id = "s33"></td>
+          </tr>
+          <tr>
+            <td class = "BigTableElement" id="s4"></td>
+            <td class = "SmallTableElement" id = "s44"></td>
+          </tr>
+          <tr>
+            <td class = "BigTableElement" id="s5"></td>
+            <td class = "SmallTableElement" id = "s55"></td>
           </tr>
   </table>
 </h3>

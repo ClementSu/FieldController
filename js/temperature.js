@@ -1,5 +1,7 @@
 var formval = "";
-var temperature = "70";
+var temperature = "";
+
+
 
 function enterValue( arg ){
 	formval = formval + arg;
@@ -14,11 +16,12 @@ function delValue(){
 
 function submitValue(){
 	if (parseInt(formval) > 100){
-		alert('Cannot exceed 100 degrees!')
+		alert('Cannot exceed 100% Brightness!')
 	} else {
 		temperature = formval;
+		$.post( "http://128.197.180.250:5000/sensors/update/", { val: temperature } );
 	}
-	displayValue();
+	displayValue();	
 
 }
 
@@ -27,5 +30,14 @@ function resetForm(){
 }
 
 function displayValue(){
-	document.getElementById("temperatureDisplay").innerHTML = temperature + "\u00B0";
+	
+	$.getJSON( "http://128.197.180.250:5000/sensors/list/", function( data ) {
+		temperature = data.data[2].svalue;
+			$("#temperatureDisplay").text(temperature);
+	});
+
 }
+$( document ).ready(function() {
+	displayValue();
+
+});
