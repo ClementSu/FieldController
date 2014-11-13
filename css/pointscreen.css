@@ -11,14 +11,15 @@ body{
  color:white;
  padding-right: 5px;
  font-family: monospace;
- text-align:center;
+ text-align:right;
+ width: 230px;
 }
  .GreenBackground{
   background-color: rgb(102,228,102);
   width: 100%;
 }
 .TitleWidth{
-  width: 278px;
+  width: 250px;
   text-indent: 10px;
   color:white;
   font-family: monospace;
