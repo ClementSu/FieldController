@@ -20,14 +20,14 @@ width:30px;
 height:30px;
 background: url('../img/lock.png');
 background-repeat: no-repeat;
-float: left;
+float: right;
 
 }
   
 .bottombar{
-    position: relative;
-	left: 446px;
-    top: 190px;
+  position: absolute;
+  top: 240px;
+  width: 476px;
 }
   
 
