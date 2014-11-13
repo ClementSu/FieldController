@@ -15,7 +15,7 @@ function myFunction() {
 }
 
 function displayHum() {
-	document.getElementById("humidty").innerHTML = humidity;
+	document.getElementById("humidity").innerHTML = humidity;
 }
 
 function displayTemp() {
