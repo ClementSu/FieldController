@@ -19,9 +19,9 @@ function submitValue(){
 		alert('Cannot exceed 100% Brightness!')
 	} else {
 		temperature = formval;
-		$.post( "http://128.197.180.250:5000/sensors/update/", { val: temperature } );
+		$("#temperatureDisplay").text(temperature + ' %');
+		$.post( "http://128.197.180.250:5000/sensors/update/", { val: temperature });
 	}
-	displayValue();	
 
 }
 
