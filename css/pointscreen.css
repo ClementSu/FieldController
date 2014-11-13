@@ -4,58 +4,57 @@ body{
 	height: 272px;
 }
 /* make sidebar nav vertical */ 
-@media (min-width: 768px) {
-  .AlignRight{
-   text-align: right;
-   text-indent: 10px;
-   font-size: 16px;
-   color:white;
-   font-family: monospace;
- }
-   .GreenBackground{
-    background-color: rgb(102,228,102);
-    width: 100%;
-  }
-  .TitleWidth{
-    width: 278px;
-    text-indent: 10px;
-    color:white;
-    font-family: monospace;
-  }
-  .bottombar{
-    position: absolute;
-    top: 240px;
-  }
-  .BigTableElement{
-    border: solid black 1px;
-    width: 331px;
-    text-indent: 10px;
-    font-size: 20px;
-  }
-  .SmallTableElement{
-    border: solid black 1px;
-    width: 150px;
-    text-indent: 15px;
-    font-size: 20px;
-
-  }
-  #home{
-    width: 30px;
-    height: 30px;
-    background: url('../img/home.png');
-    background-repeat: no-repeat;
-    margin-left: 2px;
-    float: left;
-    margin-right: 414px;
-  }
-  #lockbutton{
-    width:30px;
-    height:30px;
-    background: url('../img/lock.png');
-    background-repeat: no-repeat;
-    float: left;
-      }
+.AlignRight{
+ text-align: right;
+ text-indent: 10px;
+ font-size: 16px;
+ color:white;
+ font-family: monospace;
 }
+ .GreenBackground{
+  background-color: rgb(102,228,102);
+  width: 100%;
+}
+.TitleWidth{
+  width: 278px;
+  text-indent: 10px;
+  color:white;
+  font-family: monospace;
+}
+.bottombar{
+  position: absolute;
+  top: 240px;
+}
+.BigTableElement{
+  border: solid black 1px;
+  width: 331px;
+  text-indent: 10px;
+  font-size: 20px;
+}
+.SmallTableElement{
+  border: solid black 1px;
+  width: 150px;
+  text-indent: 15px;
+  font-size: 20px;
+
+}
+#home{
+  width: 30px;
+  height: 30px;
+  background: url('../img/home.png');
+  background-repeat: no-repeat;
+  margin-left: 2px;
+  float: left;
+  margin-right: 414px;
+}
+#lockbutton{
+  width:30px;
+  height:30px;
+  background: url('../img/lock.png');
+  background-repeat: no-repeat;
+  float: left;
+    }
+
 
 
 
