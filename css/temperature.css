@@ -47,6 +47,16 @@ body{
 
 }
 
+#back{
+  width:30px;
+  height:30px;
+  position: absolute;
+  left: 40px;
+  background: url('../img/back.png');
+  background-repeat: no-repeat;
+  float: left;
+}
+
 .sidebar-nav .navbar .navbar-collapse {
   padding: 0;
   max-height: none;
