@@ -5,18 +5,23 @@
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css" media="screen" />
   	<link rel="stylesheet" type="text/css" href="css/common.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="css/pointscreen.css" media="screen" />
+	
+
   <script src="js/pointscreen.js" type="text/javascript"></script>
 
     <title>HMI</title>
   </head>
 
   <body>
+	  
+	 
 
-    <table class = "GreenBackground"> 
+  <table class = "GreenBackground"> 
       <tr>
-    <td rowspan="2"><h2 class = "TitleWidth">Sensors </h2></td>
-    <td  class = "AlignRight"> Thurs, Nov 13, 2014  </td>
-  </tr>
+        <td rowspan="2"><h2 class = "TitleWidth">Sensors</h2></td>
+        <td  class = "AlignRight" id="date"><script>displayDate();</script></td>
+	    <tr class = "AlignRight2" id="time"><script>displayTime();</script></tr>
+      </tr>
 
   </table> 
 
