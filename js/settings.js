@@ -11,27 +11,25 @@ $(document).ready(function() {
         thetime = newValue; //update backbone model
     }
 });
+
+
 	
-    $('#date').editable();
+    $('#date').editable({
+	
+		success: function(response, newValue) 
+		{
+		}
+	});
     //make status editable
-    $('#status').editable({
-        type: 'select',
-        title: 'Select status',
-        placement: 'right',
-        value: 2,
-        source: [
-            {value: 1, text: 'status 1'},
-            {value: 2, text: 'status 2'},
-            {value: 3, text: 'status 3'}
-        ]
-        /*
-        //uncomment these lines to send data on server
-        ,pk: 1
-        ,url: '/post'
-        */
-    });
+
 });
 
 function displayTime(){
 document.getElementById("time").innerHTML = thetime;
 }
+function displayDate(){
+var d = new Date();
+document.getElementById("date").innerHTML = d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate();
+}
+
+
