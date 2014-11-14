@@ -4,7 +4,7 @@ body{
 	height: 272px;
 }
 /* make sidebar nav vertical */ 
-.AlignRight {
+.AlignRight{
  vertical-align: top;
  text-indent: 10px;
  font-size: 16px;
@@ -14,19 +14,6 @@ body{
  text-align:right;
  width: 230px;
 }
-
-.AlignRight2 {
- vertical-align: top;
- text-indent: 10px;
- font-size: 16px;
- color:white;
- padding-right: 5px;
- font-family: monospace;
- text-align:right;
- width: 230px;
-}
-
-
  .GreenBackground{
   background-color: rgb(102,228,102);
   width: 100%;
@@ -54,8 +41,6 @@ body{
   font-size: 20px;
 
 }
-
-
 #home{
   width: 30px;
   height: 30px;
