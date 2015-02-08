@@ -10,7 +10,17 @@ $(document).ready(function() {
     success: function(response, newValue) {
         thetime = newValue; //update backbone model
     }
-});
+	
+	});
+	
+		$("#lockbutton").click(function() //hypothetical activation control
+    {
+        $("#lockscreen").css("width", "100%");
+        $("#lockscreen").css("height", "100%");
+        $("#lockscreen").css("z-index", "1000");
+        //or dynamically generate z-index value
+        $("#lockscreen").fadeIn();
+    });
 
 
 	
