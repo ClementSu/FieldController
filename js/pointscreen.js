@@ -2,7 +2,7 @@ var loaded = false;
 var cell1;
 var cell2;
 function getData(){
-	$.getJSON( "http://localhost:5000/sensors/list/", function( data ) {
+	$.getJSON( "http://localhost:5000/objects/list/", function( data ) {
 		noRows = data.total;
 
 		var table = document.getElementById("sensorlist");
@@ -15,7 +15,7 @@ function getData(){
 	    		cell1 = row.insertCell(0);
 	    		cell2 = row.insertCell(1);
 	    		cell3 = row.insertCell(2);
-	    		var name = data.data[i].sname;
+	    		var name = data.data[i].name;
 	    		cell1.innerHTML = name;
 	    		cell1.className = 'BigTableElement';
 	    		cell2.className = 'SmallTableElement';
@@ -31,8 +31,8 @@ function getData(){
 		}
 			
 		for (i=0; i < noRows; i++){
-			var name = data.data[i].sname;
-		    var value = data.data[i].svalue;
+			var name = data.data[i].name;
+		    var value = data.data[i].formatted_value;
 	    	var cells = table.rows[i].cells;
 		    cells[1].innerHTML = value;
 
