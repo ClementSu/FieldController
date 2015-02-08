@@ -21,8 +21,9 @@ function getData(){
 	    		cell2.className = 'SmallTableElement';
 
 	    		var btn = document.createElement("BUTTON");
-		   		var t = document.createTextNode("Chart");       // Create a text node
-				btn.appendChild(t);                                // Append the text to <button>
+		   		//var t = document.createTextNode("Chart");       // Create a text node
+				//btn.appendChild(t);                                // Append the text to <button>
+				btn.className = 'ChartButton';
  				cell3.appendChild(btn);  
 	    		
 			}

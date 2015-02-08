@@ -71,7 +71,14 @@ body{
   background: url('../img/lock.png');
   background-repeat: no-repeat;
   float: left;
-    }
+}
+
+.ChartButton {
+  background: url('../img/chart.png') no-repeat;
+  width: 32px; /* width of image */
+  height: 32px; /* height of image */
+  border: 0.5;
+}
 
 
 
