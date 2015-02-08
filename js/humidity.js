@@ -3,7 +3,7 @@ var humidity = "20";
 
 $(document).ready(function() {
 				$('#basic').grid({
-		    		url: 'http://128.197.180.250:5000/sensors/list/',
+		    		url: 'http://localhost:5000/sensors/list/',
 		    	});
 		    	});
 

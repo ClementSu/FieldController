@@ -1,7 +1,27 @@
-
+function getUrlParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+} 
 
 function showChart() {
 
+  id = getUrlParameter('id');
+  if (id != undefined && id != null) {
+    renderChart(id);
+  }
+
+}
+
+function renderChart(id) {
 options = {
   bezierCurve : false,
     //Boolean - Show a backdrop to the scale label
@@ -35,7 +55,7 @@ options = {
     animationSteps : 100,
 
     //String - Animation easing effect.
-    animationEasing : "easeOutBounce",
+    animationEasing : null,
 
     //Boolean - Whether to animate the rotation of the chart
     animateRotate : true,

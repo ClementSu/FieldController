@@ -2,7 +2,7 @@ var loaded = false;
 var cell1;
 var cell2;
 function getData(){
-	$.getJSON( "http://localhost:5000/sensors/list/", function( data ) {
+	$.getJSON( "http://localhost:5000/objects/list/", function( data ) {
 		noRows = data.total;
 
 		var table = document.getElementById("sensorlist");
@@ -15,15 +15,17 @@ function getData(){
 	    		cell1 = row.insertCell(0);
 	    		cell2 = row.insertCell(1);
 	    		cell3 = row.insertCell(2);
-	    		var name = data.data[i].sname;
-	    		cell1.innerHTML = name;
+	    		var name = data.data[noRows-i-1].name;
+	    		cell1.innerHTML = "<a href='detail.html?id=" + data.data[noRows-i-1].id + "'>" + name + "</a>";
+
 	    		cell1.className = 'BigTableElement';
 	    		cell2.className = 'SmallTableElement';
 
-	    		var btn = document.createElement("BUTTON");
+	    		var btn = document.createElement("a");
 		   		//var t = document.createTextNode("Chart");       // Create a text node
 				//btn.appendChild(t);                                // Append the text to <button>
 				btn.className = 'ChartButton';
+				btn.href = "chart.html?id=" + data.data[noRows-i-1].id;
  				cell3.appendChild(btn);  
 	    		
 			}
@@ -31,8 +33,8 @@ function getData(){
 		}
 			
 		for (i=0; i < noRows; i++){
-			var name = data.data[i].sname;
-		    var value = data.data[i].svalue;
+			var name = data.data[i].name;
+		    var value = data.data[i].formatted_value;
 	    	var cells = table.rows[i].cells;
 		    cells[1].innerHTML = value;
 
@@ -55,10 +57,6 @@ function getData(){
     	getData();
     }, 1000);
 	});
-}
-
-function myFunction() {
-    document.getElementById("Humidity").innerHTML = "Entered Humidity Screen!";
 }
 
 

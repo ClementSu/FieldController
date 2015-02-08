@@ -78,6 +78,7 @@ body{
   width: 32px; /* width of image */
   height: 32px; /* height of image */
   border: 0.5;
+  display: block;
 }
 
 
