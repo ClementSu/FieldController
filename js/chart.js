@@ -1,7 +1,8 @@
 
-
-function showChart() {
-
+var myLiveChart;
+var latestLabel = 10;
+function showChart(data) {
+  //alert(JSON.stringify(data));
 options = {
   bezierCurve : false,
     //Boolean - Show a backdrop to the scale label
@@ -32,10 +33,10 @@ options = {
     segmentStrokeWidth : 2,
 
     //Number - Amount of animation steps
-    animationSteps : 100,
+    animationSteps : 10,
 
     //String - Animation easing effect.
-    animationEasing : "easeOutBounce",
+    animationEasing : null,
 
     //Boolean - Whether to animate the rotation of the chart
     animateRotate : true,
@@ -47,34 +48,79 @@ options = {
     legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
 
 }
+//alert(data.data)
+var x_axis;
+var y_axis;
+data_array = [];
+for (i = 0; i < 10; i++){
+  data_array[i] = data.data[i];
+}
+
 var canvas = document.getElementById('myChart'),
     ctx = canvas.getContext('2d'),
     startingData = {
-      labels: [1, 2, 3, 4, 5, 6, 7],
+      labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       datasets: [
           {
               fillColor: "rgba(151,187,205,0.2)",
               strokeColor: "rgba(151,187,205,1)",
               pointColor: "rgba(151,187,205,1)",
               pointStrokeColor: "#fff",
-              data: [28, 48, 40, 19, 86, 27, 90]
+              data: data_array
           }
       ]
     },
-    latestLabel = startingData.labels[6];
+    latestLabel = 10;
 
 // Reduce the animation steps for demo clarity.
-var myLiveChart = new Chart(ctx).Line(startingData, options);
+myLiveChart = new Chart(ctx).Line(startingData, options);
 
 
 setInterval(function(){
-  // Add two random numbers for each dataset
-  myLiveChart.addData([Math.random() * 100], ++latestLabel);
-  // Remove the first point so we dont just add values forever
-  myLiveChart.removeData();
+  getUpdatedData(1, 5);
 }, 5000);
 
 }
+
+function updateChart(data) {
+    // Add two random numbers for each dataset
+  myLiveChart.addData([data.data[0]], ++latestLabel);
+  // Remove the first point so we dont just add values forever
+  myLiveChart.removeData();
+}
+
+function getUpdatedData(sensor_id, interval) {
+  JSONrequest = "http://localhost:5000/objects/get/historic/?id="+sensor_id+"&num=1&interval="+interval;
+  $.getJSON( JSONrequest, function( data ) {
+    
+    updateChart(data);
+   /* setTimeout(function () {
+      getData();
+    }, 1000);
+  });*/
+  });
+}
+
+function getData(sensor_id, interval){
+  
+  JSONrequest = "http://localhost:5000/objects/get/historic/?id="+sensor_id+"&num=10&interval="+interval;
+  $.getJSON( JSONrequest, function( data ) {
+    
+    handleData(data);
+   /* setTimeout(function () {
+      getData();
+    }, 1000);
+  });*/
+  });
+  //return returndata;
+}
+
+function handleData(data){
+  showChart(data);
+}
+
+
+
 
 
 

@@ -20,7 +20,7 @@ function submitValue(){
 	} else {
 		temperature = formval;
 		$("#temperatureDisplay").text(temperature + ' %');
-		$.post( "http://localhost:5000/sensors/update/", { val: temperature });
+		$.post( "http://localhost:5000/objects/update/", { val: temperature });
 	}
 
 }
@@ -31,7 +31,7 @@ function resetForm(){
 
 function displayValue(){
 	
-	$.getJSON( "http://localhost:5000/sensors/list/", function( data ) {
+	$.getJSON( "http://localhost:5000/object/list/", function( data ) {
 		temperature = data.data[2].svalue;
 			$("#temperatureDisplay").text(temperature);
 	});

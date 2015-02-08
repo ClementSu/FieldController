@@ -60,6 +60,11 @@ font-family: monospace;
 color: green;
 }
 
+.navbuttons{
+  left: 70px;
+  top: 30px;
+}
+
 body {
 	border-collapse: collapse;
 	border: 1px solid black;
