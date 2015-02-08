@@ -14,10 +14,16 @@ function getData(){
 				
 	    		cell1 = row.insertCell(0);
 	    		cell2 = row.insertCell(1);
+	    		cell3 = row.insertCell(2);
 	    		var name = data.data[i].sname;
 	    		cell1.innerHTML = name;
 	    		cell1.className = 'BigTableElement';
 	    		cell2.className = 'SmallTableElement';
+
+	    		var btn = document.createElement("BUTTON");
+		   		var t = document.createTextNode("Chart");       // Create a text node
+				btn.appendChild(t);                                // Append the text to <button>
+ 				cell3.appendChild(btn);  
 	    		
 			}
 			loaded = true;
@@ -27,7 +33,9 @@ function getData(){
 			var name = data.data[i].sname;
 		    var value = data.data[i].svalue;
 	    	var cells = table.rows[i].cells;
-		    cells[1].innerHTML = value;		    	
+		    cells[1].innerHTML = value;
+
+		    	    	
 		}
 
 		//s1 = data.data[0].sname;
