@@ -5,14 +5,14 @@ $( document ).ready(function() {
 	$(".numeric").mousedown(function(e) {
     e.preventDefault();
     var val = $(this).text();
-    var inputtxt = $(document.activeElement);
+    var inputtxt = $('#PinForm');
     inputtxt.val(inputtxt.val() + val);
     return false;
 	});
 	
 	$(".del").mousedown(function(e) {
 	e.preventDefault();
-	var inputtxt = $(document.activeElement);
+    var inputtxt = $('#PinForm');
 	var mystr = inputtxt.val();
 	inputtxt.val(mystr.substring(0, mystr.length - 1));
 	return false;
