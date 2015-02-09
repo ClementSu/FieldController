@@ -22,10 +22,19 @@ $( document ).ready(function() {
 	e.preventDefault();
 	if ($('#PinForm').val() != PIN)
 	{
-	alert('Incorrect PIN!');
-	$('#PinForm').val("");
+	alert('Incorrect Existing PIN!');
 	return;
 	}
+	else if ($('#NewPinForm').val() != $('#ConfirmPinForm').val())
+	{
+	alert('New PIN Fields Do Not Match!');
+	return;
+	}
+	
+	alert('PIN Change Success!')
+	$('#PinForm').val("");
+	$('#NewPinForm').val("");
+	$('#ConfirmPinForm').val("");
 	
 	});
 	
