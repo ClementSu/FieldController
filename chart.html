@@ -15,20 +15,20 @@
     <title>HMI</title>
   </head>
   <body>
-    <h1 class="screenname">Chart</h1>
+    <h1 class="screenname" id="screenname"></h1>
       <canvas id="myChart" width="450" height="180px"></canvas>
-    <script> 
-    window.onload = showChart;
-    </script>
     <div id="intervalbuttons"> 
-            <button type="button" class="btn btn-default" aria-label="Left Align" id="onemin">
-                <span>1m</span>
+            <button type="button" class="btn btn-default" aria-label="Left Align" onclick="newInterval(1);">
+                <span>1s</span>
             </button>
-            <button type="button" class="btn btn-default" aria-label="Left Align" id="twomin">
-                <span>5m</span>
+            <button type="button" class="btn btn-default" aria-label="Left Align" onclick="newInterval(5);">
+                <span>5s</span>
           </button>
-          <button type="button" class="btn btn-default" aria-label="Left Align" id="threemin">
-                <span>10m</span>
+          <button type="button" class="btn btn-default" aria-label="Left Align" onclick="newInterval(60);">
+                <span>1m</span>
+          </button>
+          <button type="button" class="btn btn-default" aria-label="Left Align" onclick="newInterval(300);">
+                <span>5m</span>
           </button>
     </div>
 

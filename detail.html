@@ -4,8 +4,8 @@
     <script src="dist/js/jquery-2.1.1.min.js"></script> 
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css" media="screen" />
   	<link rel="stylesheet" type="text/css" href="css/common.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="css/chart.css" media="screen" />
-  <script src="js/temperature.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/detail.css" media="screen" />
+  <script src="js/detail.js" type="text/javascript"></script>
 	
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +13,10 @@
     <title>HMI</title>
   </head>
   <body>
-    <h1 class="screenname">Rm 113 Lighting</h1>
+    <h1 class="screenname" id="screenname"></h1>
     <div class="container">
-        <form class="form-horizontal" role="form">
-              <input type="text" class="form-control" placeholder="Enter Lightning" id="TemperatureForm"></input>
+        <form class="form-horizontal" role="form" id="newvalform">
+              <input type="text" class="form-control" placeholder="Enter new value" id="newvalue"></input>
         </form>
       <table class="keypad">
           <tr class="key-row">
@@ -65,8 +65,8 @@
             </td>  
         </table>
         <div>
-          <h4>Current Lighting:</h4></br>
-          <div class="col-xs-5" id="temperatureDisplay"></div>
+          <h4>Current value:</h4></br>
+          <div class="col-xs-2" id="valuedisplay"></div>
         </div>
       </div>
     <div class="bottombar">

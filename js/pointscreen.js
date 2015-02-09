@@ -16,8 +16,11 @@ function getData(){
 	    		cell2 = row.insertCell(1);
 	    		cell3 = row.insertCell(2);
 	    		var name = data.data[noRows-i-1].name;
-	    		cell1.innerHTML = "<a href='detail.html?id=" + data.data[noRows-i-1].id + "'>" + name + "</a>";
-
+	    		if (data.data[noRows-i-1].detail == true) {
+	    			cell1.innerHTML = "<a href='detail.html?id=" + data.data[noRows-i-1].id + "'>" + name + "</a>";
+	    		} else {
+					cell1.innerHTML = name;
+	    		}
 	    		cell1.className = 'BigTableElement';
 	    		cell2.className = 'SmallTableElement';
 
