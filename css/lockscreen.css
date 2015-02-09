@@ -116,12 +116,7 @@ body{
   font-weight: normal;
 }
 
-#temperatureDisplay {
-position: relative;
-bottom: 10px;
-left: 40px;
-font-size: -webkit-xxx-large;
-}
+
 
 li{
   width: 240px;

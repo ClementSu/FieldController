@@ -39,7 +39,7 @@ body{
 }
 .bottombar{
   position: absolute;
-  top: 240px;
+  top: 238px;
 }
 .BigTableElement{
   border: solid black 1px;
@@ -59,18 +59,30 @@ body{
 #home{
   width: 30px;
   height: 30px;
-  background: url('../img/home.png');
+  background: url('../img/home1.png');
   background-repeat: no-repeat;
-  margin-left: 2px;
-  float: left;
-  margin-right: 414px;
+  border: none;
+}
+
+#homelink{
+  width: 30px;
+  height: 30px;
+  display: block;
 }
 #lockbutton{
   width:30px;
   height:30px;
   background: url('../img/lock.png');
   background-repeat: no-repeat;
-  float: left;
+  border: none;
+}
+#locklink{
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+#pad{
+  padding-right: 413px;
 }
 
 .ChartButton {

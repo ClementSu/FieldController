@@ -12,6 +12,7 @@ font-family: monospace;
 left: 100px;
 width: 128px;
 background: url('../img/points.png');
+border: none;
 }
 
 #lockbutton{
@@ -35,6 +36,7 @@ float: right;
 left: 260px;
 width: 128px;
 background: url('../img/setting.png');
+border: none;
 }
 
 
