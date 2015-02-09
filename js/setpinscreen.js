@@ -1,5 +1,3 @@
-var PIN = "123456";
-
 $( document ).ready(function() {
 
 	$(".numeric").mousedown(function(e) {
@@ -20,23 +18,39 @@ $( document ).ready(function() {
 	
 	$(".enter").mousedown(function(e) {
 	e.preventDefault();
-	if ($('#PinForm').val() != PIN)
-	{
-	alert('Incorrect Existing PIN!');
-	return;
+	if ($('#NewPinForm').val().length < 3) {
+		alert('PIN must be at least 3 digits');
+		return;
 	}
-	else if ($('#NewPinForm').val() != $('#ConfirmPinForm').val())
+	if ($('#NewPinForm').val() != $('#ConfirmPinForm').val())
 	{
 	alert('New PIN Fields Do Not Match!');
 	return;
 	}
+	if (changePIN($('#PinForm').val(), $('#NewPinForm').val()) != true) {
+		alert('Incorrect Existing PIN!');
+		return;
+	} else {
 	
-	alert('PIN Change Success!')
+	alert('PIN Change Success!');
 	$('#PinForm').val("");
 	$('#NewPinForm').val("");
 	$('#ConfirmPinForm').val("");
 	
+	}
+
 	});
 	
 
 });
+
+function changePIN(currentpin, newpin) {
+	var resp = $.ajax({
+        type: "POST",
+        url: "http://localhost:5000/auth/set/",
+        async: false,
+        data: {cpin: currentpin, npin: newpin}
+    }).responseText;
+    resp = JSON.parse(resp);
+    return resp.success;
+}

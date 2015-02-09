@@ -1,4 +1,3 @@
-var PIN = "123456";
 
 $( document ).ready(function() {
 	$(".numeric").mousedown(function(e) {
@@ -19,7 +18,7 @@ $( document ).ready(function() {
 	
 	$(".enter").mousedown(function(e) {
 	e.preventDefault();
-	if ($('#PinForm').val() != PIN)
+	if (validatePIN($('#PinForm').val()) != true)
 	{
 	alert('Incorrect PIN!');
 	$('#PinForm').val("");
@@ -30,3 +29,13 @@ $( document ).ready(function() {
 	
 
 });
+
+function validatePIN(pin) {
+	var resp = $.ajax({
+        type: "GET",
+        url: "http://localhost:5000/auth/verify/?pin=" + pin,
+        async: false
+    }).responseText;
+    resp = JSON.parse(resp);
+    return resp.success;
+}
