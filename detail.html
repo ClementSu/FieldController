@@ -13,7 +13,14 @@
     <title>HMI</title>
   </head>
   <body>
-    <h1 class="screenname" id="screenname"></h1>
+    <table class = "TitleBackground"> 
+      <tr>
+        <td rowspan="2"><div class= "TitleWidth" id="screenname"></div></td>
+        <td  class = "AlignRight" id="date"><script>displayDate();</script></td>
+      <tr class = "AlignRight2" id="time"><script>displayTime();</script></tr>
+      </tr>
+
+  </table> 
     <div class="container">
         <form class="form-horizontal" role="form" id="newvalform">
               <input type="text" class="form-control" placeholder="Enter new value" id="newvalue"></input>
@@ -72,7 +79,6 @@
     <div class="bottombar">
                 <a href="index.html"> <div id="home"></div></a>
                 <a href="pointscreen.html"> <div id = "back"></div></a>
-                <a href="#"><div id="lockbutton"></div></a>
     </div>
   </body>
 </html>

@@ -13,7 +13,14 @@
     <title>HMI</title>
   </head>
   <body>
-    <h1 class="screenname">Set New PIN</h1>
+    <table class = "TitleBackground"> 
+      <tr>
+        <td rowspan="2"><div class = "TitleWidth">Home</div></td>
+        <td  class = "AlignRight" id="date"><script>displayDate();</script></td>
+      <tr class = "AlignRight2" id="time"><script>displayTime();</script></tr>
+      </tr>
+
+  </table> 
     <div class="container">
 		<form class="form-horizontal" role="form">
               <input type="text" class="form-control" placeholder="Enter Existing PIN" id="PinForm"></input>
@@ -21,9 +28,10 @@
         <form class="form-horizontal" role="form">
               <input type="text" class="form-control" placeholder="Enter New PIN" id="NewPinForm"></input>
         </form>
-		<form class="form-horizontal" role="form">
-              <input type="text" class="form-control" placeholder="Confirm New PIN" id="ConfirmPinForm""></input>
+        <form class="form-horizontal" role="form">
+              <input type="text" class="form-control" placeholder="Confirm New PIN" id="ConfirmPinForm"></input>
         </form>
+
       <table class="keypad">
           <tr class="key-row">
             <td class="key-cell">
@@ -74,7 +82,6 @@
     <div class="bottombar">
                 <a href="index.html"> <div id="home"></div></a>
                 <a href="settings.html"> <div id = "back"></div></a>
-                <a href="#"><div id="lockbutton"></div></a>
     </div>
   </body>
 </html>

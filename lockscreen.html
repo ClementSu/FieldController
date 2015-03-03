@@ -13,7 +13,14 @@
     <title>HMI</title>
   </head>
   <body>
-    <h1 class="screenname">Authentication</h1>
+    <table class = "TitleBackground"> 
+      <tr>
+        <td rowspan="2"><div class = "TitleWidth">Authentication</div></td>
+        <td  class = "AlignRight" id="date"><script>displayDate();</script></td>
+      <tr class = "AlignRight2" id="time"><script>displayTime();</script></tr>
+      </tr>
+
+  </table> 
     <div class="container">
         <form class="form-horizontal" role="form">
               <input type="text" class="form-control" placeholder="Enter PIN" id="PinForm"></input>
