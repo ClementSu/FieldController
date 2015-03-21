@@ -26,14 +26,12 @@ function getData(){
 	    		cell1.className = 'BigTableElement';
 	    		cell2.className = 'SmallTableElement';
 
-	    		if (data.data[noRows-i-1].units) {
 	    		var btn = document.createElement("a");
 		   		//var t = document.createTextNode("Chart");       // Create a text node
 				//btn.appendChild(t);                                // Append the text to <button>
 				btn.className = 'ChartButton';
 				btn.href = "chart.html?id=" + data.data[noRows-i-1].id;
  				cell3.appendChild(btn);  
- 				}
 	    		
 			}
 			loaded = true;
