@@ -1,14 +1,21 @@
-body{
-	border: solid black 1px;
-	width: 480px;
-	height: 272px;
+
+.TitleBackground{
+  background-color: rgb(226, 226, 226);
+  width: 100%;
 }
-/* make sidebar nav vertical */ 
+.TitleWidth{
+  width: 250px;
+  text-indent: 10px;
+  color:black;
+  font-family: monospace;
+  font-size: xx-large;
+}
+
 .AlignRight {
  vertical-align: top;
  text-indent: 10px;
  font-size: 16px;
- color:white;
+ color:black;
  padding-right: 5px;
  font-family: monospace;
  text-align:right;
@@ -19,23 +26,11 @@ body{
  vertical-align: top;
  text-indent: 10px;
  font-size: 16px;
- color:white;
+ color:black;
  padding-right: 5px;
  font-family: monospace;
  text-align:right;
  width: 230px;
-}
-
-
- .GreenBackground{
-  background-color: rgb(102,228,102);
-  width: 100%;
-}
-.TitleWidth{
-  width: 250px;
-  text-indent: 10px;
-  color:white;
-  font-family: monospace;
 }
 .bottombar{
   position: absolute;
