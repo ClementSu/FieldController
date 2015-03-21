@@ -21,8 +21,11 @@ $( document ).ready(function() {
 	if (validatePIN($('#PinForm').val()) != true)
 	{
 	alert('Incorrect PIN!');
+	e.preventDefault();
 	$('#PinForm').val("");
 	return;
+	} else {
+		window.location = "pointscreen.html";
 	}
 	
 	});
