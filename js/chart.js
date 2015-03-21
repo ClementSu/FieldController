@@ -42,10 +42,35 @@ function showChart() {
 
 function renderChart(data) {
 
+
+//replace numerical data with string label if appropriate. Uses for "scaleLabel" in options below
+replaceLabel = ""; //temporary string for y-axis label replacing command
+if (data.labels) {
+  for (i = 0; data.labels[i] != null; i++){
+    replaceLabel = replaceLabel + ".replace(" + i + "," + "'" + data.labels[i] + "')"
+  }
+}
+
 options = {
   bezierCurve : false,
     //Boolean - Show a backdrop to the scale label
     scaleShowLabelBackdrop : true,
+
+    // Boolean - If we should show the scale at all
+    showScale: true,
+
+    scaleLabel : "<%=value"+replaceLabel+"%>", //replace y-axis numerical values with labels
+
+    // Boolean - If we want to override with a hard coded scale
+    scaleOverride: false,
+
+    // ** Required if scaleOverride is true **
+    // Number - The number of steps in a hard coded scale
+    scaleSteps: 3,
+    // Number - The value jump in the hard coded scale
+    scaleStepWidth: null,
+    // Number - The scale starting value
+    scaleStartValue: null,
 
     //String - The colour of the label backdrop
     scaleBackdropColor : "rgba(255,255,255,0.75)",
@@ -92,6 +117,9 @@ var x_axis;
 var y_axis;
 data_array = [];
 label_array = [];
+
+
+
 for (i = 0; i < numSamples; i++){
   data_array[i] = data.data[i];
 }
