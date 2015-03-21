@@ -15,15 +15,8 @@
     <title>HMI</title>
   </head>
   <body>
-    <table class = "TitleBackground"> 
-      <tr>
-        <td rowspan="2"><div class= "TitleWidth" id="screenname"></div></td>
-        <td  class = "AlignRight" id="date"><script>displayDate();</script></td>
-      <tr class = "AlignRight2" id="time"><script>displayTime();</script></tr>
-      </tr>
-
-  </table> 
-      <canvas id="myChart" width="450" height="160px"></canvas>
+    <h1 class="screenname" id="screenname"></h1>
+      <canvas id="myChart" width="450" height="180px"></canvas>
     <div id="intervalbuttons"> 
             <button type="button" class="btn btn-default" aria-label="Left Align" onclick="newInterval(1);">
                 <span>1s</span>
