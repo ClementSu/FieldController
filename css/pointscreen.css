@@ -50,6 +50,12 @@
 
 }
 
+#scroller{
+height: 190px;
+width: 477px;
+position: absolute;
+overflow:auto;
+}
 
 #home{
   width: 30px;
