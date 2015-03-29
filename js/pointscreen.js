@@ -1,6 +1,8 @@
 var loaded = false;
 var cell1;
 var cell2;
+
+
 function getData(){
 	$.getJSON( "http://localhost:5000/objects/list/", function( data ) {
 		noRows = data.total;
@@ -76,7 +78,11 @@ document.getElementById("time").innerHTML = d.getHours() + ":" + min + ":" + sec
     }, 1000);
 }
 
+
 $( document ).ready(function() {
+
+
+	$('#scroller').dragscrollable();
 	getData();
 
 });

@@ -56,16 +56,15 @@
   padding-right: 413px;
 }
 
-
-
-
-#scroller{
-height: 190px;
-width: 477px;
-position: absolute;
-overflow:auto;
+#scroller {
+    position: relative;  /* to enable further positioned divs inside content area */
+    border: 1px solid #777;
+    width:477px;
+    height:190px;
+    overflow: hidden;
 }
 
+/*
 
 ::-webkit-scrollbar-track-piece{
   background-color:#fff;
@@ -98,7 +97,7 @@ body{
     user-select: none;
 }
 
-
+*/
 
 
 
