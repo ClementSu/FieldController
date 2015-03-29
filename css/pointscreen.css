@@ -34,9 +34,12 @@ overflow:auto;
 #home{
   width: 30px;
   height: 30px;
+  position: absolute;
   background: url('../img/home.png');
   background-repeat: no-repeat;
-  border: none;
+  margin-left: 2px;
+  float: left;
+  margin-right: 414px;
 }
 
 #homelink{
@@ -62,6 +65,28 @@ overflow:auto;
 
 
 
+
+::-webkit-scrollbar-track-piece{
+  background-color:#fff;
+  -webkit-border-radius:0;
+}
+::-webkit-scrollbar{
+  width:25px;
+  height:100%;
+}
+::-webkit-scrollbar-thumb{
+  height:50px;
+  background-color:#999;
+  -webkit-border-radius:4px;
+  outline:2px solid #fff;
+  outline-offset:-2px;
+  border: 2px solid #fff;
+}
+::-webkit-scrollbar-thumb:hover{
+  height:50px;
+  background-color:#9f9f9f;
+  -webkit-border-radius:4px;
+}
 
 
 

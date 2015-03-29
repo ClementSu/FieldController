@@ -45,7 +45,7 @@ body {
 }
 
 /* Disable text highlighting */
-/*
+
 * {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -53,8 +53,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    cursor: none;
-}*/
+}
 
 
 /* tryin to follow this answer.... http://stackoverflow.com/questions/7063974/html-and-css-lock-screen-for-mobile-web-application  */
@@ -72,3 +71,22 @@ h1 {
     font-size: 28px !important;
     font-weight: normal !important;
 }
+button:focus {
+  outline: none;
+}
+
+@media (max-width: 500px) {
+* {
+cursor: none !important;
+}
+*:hover {
+cursor: none !important;
+}
+*:focus {
+cursor: none !important;
+}
+*:visited {
+cursor: none !important;
+}
+}
+

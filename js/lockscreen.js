@@ -1,5 +1,6 @@
 
-$( document ).ready(function() {
+$(document).ready(function () {
+
 	$(".numeric").mousedown(function(e) {
     e.preventDefault();
     var val = $(this).text();
@@ -27,7 +28,6 @@ $( document ).ready(function() {
 	} else {
 		window.location = "pointscreen.html";
 	}
-	
 	});
 	
 
