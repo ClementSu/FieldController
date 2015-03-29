@@ -44,7 +44,7 @@ $( document ).ready(function() {
 
 });
 
-function changePIN(currentpin, newpin) {
+function changePIN(currentpin, newpin) {	//changes the stores PIN on the server
 	var resp = $.ajax({
         type: "POST",
         url: "http://localhost:5000/auth/set/",

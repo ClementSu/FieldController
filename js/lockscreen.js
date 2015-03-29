@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
 
-	$(".numeric").mousedown(function(e) {
+	$(".numeric").mousedown(function(e) {	// when a number is pressed, print the number
     e.preventDefault();
     var val = $(this).text();
     var inputtxt = $('#PinForm');
@@ -9,7 +9,7 @@ $(document).ready(function () {
     return false;
 	});
 	
-	$(".del").mousedown(function(e) {
+	$(".del").mousedown(function(e) {	// when delete is pressed, backspace the PIN
 	e.preventDefault();
     var inputtxt = $('#PinForm');
 	var mystr = inputtxt.val();
@@ -17,7 +17,7 @@ $(document).ready(function () {
 	return false;
 	});
 	
-	$(".enter").mousedown(function(e) {
+	$(".enter").mousedown(function(e) {	//when enter is pressed, submit the PIN
 	e.preventDefault();
 	if (validatePIN($('#PinForm').val()) != true)
 	{
@@ -33,7 +33,7 @@ $(document).ready(function () {
 
 });
 
-function validatePIN(pin) {
+function validatePIN(pin) {	//check if PIN matches value stored in server
 	var resp = $.ajax({
         type: "GET",
         url: "http://localhost:5000/auth/verify/?pin=" + pin,
