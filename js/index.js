@@ -1,9 +1,11 @@
-function displayDate(){
+
+function displayDate(){	//displays the date
 var d = new Date();
 document.getElementById("date").innerHTML = d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate();
 }
 
-function displayTime(){
+
+function displayTime(){	//displays the time
 var d = new Date();
 var min = d.getMinutes();
 if (min < 10)
