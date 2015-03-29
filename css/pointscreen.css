@@ -50,13 +50,6 @@
 
 }
 
-#scroller{
-height: 190px;
-width: 477px;
-position: absolute;
-overflow:auto;
-}
-
 #home{
   width: 30px;
   height: 30px;
@@ -98,6 +91,14 @@ overflow:auto;
 }
 
 
+#scroller{
+height: 190px;
+width: 477px;
+position: absolute;
+overflow:auto;
+}
+
+
 ::-webkit-scrollbar-track-piece{
   background-color:#fff;
   -webkit-border-radius:0;
@@ -118,6 +119,15 @@ overflow:auto;
   height:50px;
   background-color:#9f9f9f;
   -webkit-border-radius:4px;
+}
+
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 

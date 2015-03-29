@@ -1,0 +1,163 @@
+.TitleBackground{
+  background-color: rgb(226, 226, 226);
+  width: 100%;
+}
+.TitleWidth{
+  width: 250px;
+  text-indent: 10px;
+  color:black;
+  font-family: monospace;
+  font-size: x-large;
+}
+
+.AlignRight {
+ vertical-align: top;
+ text-indent: 10px;
+ font-size: 16px;
+ color:black;
+ padding-right: 5px;
+ font-family: monospace;
+ text-align:right;
+ width: 230px;
+}
+
+.AlignRight2 {
+ vertical-align: top;
+ text-indent: 10px;
+ font-size: 16px;
+ color:black;
+ padding-right: 5px;
+ font-family: monospace;
+ text-align:right;
+ width: 230px;
+}
+
+/* make sidebar nav vertical */ 
+.screenname{
+  background-color: rgb(102, 228, 102);
+  width: 479px;
+  margin-top: 0px;
+  text-indent: 5px;
+  color: white;
+  font-family: monospace;
+}
+.navbar{
+  width: 56px;
+  height: 56px;
+}
+.navbar-nav{
+
+}
+.bottombar{
+  position: absolute;
+  top: 240px;
+}
+#home{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: url('../img/home.png');
+  background-repeat: no-repeat;
+  margin-left: 2px;
+  float: left;
+  margin-right: 414px;
+}
+
+#lockbutton{
+  width:30px;
+  height:30px;
+  position: absolute;
+  left: 446px;
+  background: url('../img/lock.png');
+  background-repeat: no-repeat;
+  float: left;
+
+}
+
+#back{
+  width:30px;
+  height:30px;
+  position: absolute;
+  left: 40px;
+  background: url('../img/back.png');
+  background-repeat: no-repeat;
+  float: left;
+}
+
+.sidebar-nav .navbar .navbar-collapse {
+  padding: 0;
+  max-height: none;
+  width: 480px;
+	height: 272px;
+
+}
+.sidebar-nav .navbar ul {
+  float: none;
+
+}
+.sidebar-nav .navbar ul:not {
+  display: block;
+}
+.sidebar-nav .navbar li {
+  float: none;
+  display: block;
+}
+.sidebar-nav .navbar li a {
+  padding-top: 5px;
+  padding-bottom: 12px;
+}
+.form-horizontal {
+  width: 23%;
+  padding-left: 0px;
+}
+.form-control{
+  width: 210px;
+  margin: 5px;
+
+}
+.keypad {
+  position: absolute;
+  top: 40px;
+  left: 250px;
+  float: left;
+  margin: 10px auto;
+  padding: 0;
+}
+
+.keypad .key-row {
+  width: 100%
+}
+
+.keypad .key-row .key-cell {
+  width: 25%;
+}
+
+.keypad .key-row .key-cell button.key {
+  font-size: medium;
+  font-weight: bold;
+  height: 45px;
+  width: 100%;
+}
+
+.keypad .key-row .key-cell button .key-alt-fn {
+  font-size: small;
+  font-weight: normal;
+}
+
+#valuedisplay {
+position: relative;
+bottom: 10px;
+width: 200px;
+
+font-size: -webkit-xxx-large;
+}
+
+li{
+  width: 240px;
+}
+
+
+
+
+
+

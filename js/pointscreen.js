@@ -61,6 +61,14 @@ var sec = d.getSeconds();
 if (sec < 10)
 sec = "0" + sec.toString();
 
+var clicked = false, clickY;
+
+
+var updateScrollPos = function(e) {
+    $('html').css('cursor', 'row-resize');
+    $(window).scrollTop($(window).scrollTop() + (clickY - e.pageY));
+}
+
 document.getElementById("time").innerHTML = d.getHours() + ":" + min + ":" + sec;
 
 	  setTimeout(function () {
