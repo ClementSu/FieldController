@@ -8,10 +8,7 @@ function getData(){
 		var table = document.getElementById("sensorlist");
 		if (loaded == false) {
 			for (i=0; i < noRows; i++){
-				
 				var row = table.insertRow(0);
-
-				
 	    		cell1 = row.insertCell(0);
 	    		cell2 = row.insertCell(1);
 	    		cell3 = row.insertCell(2);
@@ -26,14 +23,10 @@ function getData(){
 	    		cell1.className = 'BigTableElement';
 	    		cell2.className = 'SmallTableElement';
 
-			//if (data.data[noRows-i-1].units) {
 	    		var btn = document.createElement("a");
-		   		//var t = document.createTextNode("Chart");       // Create a text node
-				//btn.appendChild(t);                                // Append the text to <button>
 				btn.className = 'ChartButton';
 				btn.href = "chart.html?id=" + data.data[noRows-i-1].id;
  				cell3.appendChild(btn);  
- 			//}
 	    		
 			}
 			loaded = true;
@@ -43,22 +36,8 @@ function getData(){
 			var name = data.data[i].name;
 		    var value = data.data[i].formatted_value;
 	    	var cells = table.rows[i].cells;
-		    cells[1].innerHTML = value;
-
-		    	    	
+		    cells[1].innerHTML = value;		    	    	
 		}
-
-		//s1 = data.data[0].sname;
-		//s11 = data.data[0].svalue;
-		//s2 = data.data[1].sname;
-		//s22 = data.data[1].svalue;
-		
-
-		//$("#s1").text(s1);
-		//$("#s11").text(s11);
-		//$("#s2").text(s2);
-		//$("#s22").text(s22);
-
 
 	  setTimeout(function () {
     	getData();
@@ -88,16 +67,6 @@ document.getElementById("time").innerHTML = d.getHours() + ":" + min + ":" + sec
     	displayTime();
     }, 1000);
 }
-
-/*
-function displayHum(humidity) {
-	$("#humidity").text(humidity);
-}
-
-function displayTemp(temperature) {
-	$("#temperature").text(temperature);
-}*/
-
 
 $( document ).ready(function() {
 	getData();

@@ -36,7 +36,6 @@ function showChart() {
   if (id != undefined && id != null) {
     getData(id, interval);
   }
-
 }
 
 

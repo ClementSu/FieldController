@@ -9,7 +9,6 @@ $(document).ready(function() {
 
 function enterValue( arg ){
 	formval = formval + arg;
-
 	document.getElementById("HumidityForm").value = formval;
 }
 
