@@ -48,16 +48,6 @@ function getData(){
 		    	    	
 		}
 
-		//s1 = data.data[0].sname;
-		//s11 = data.data[0].svalue;
-		//s2 = data.data[1].sname;
-		//s22 = data.data[1].svalue;
-		
-
-		//$("#s1").text(s1);
-		//$("#s11").text(s11);
-		//$("#s2").text(s2);
-		//$("#s22").text(s22);
 
 
 	  setTimeout(function () {
