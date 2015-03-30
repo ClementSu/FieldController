@@ -26,7 +26,7 @@ function getData(){
 	    		cell2.className = 'SmallTableElement';
 
 	    		var btn = document.createElement("a");
-				btn.className = 'btn-mini';
+				btn.className = 'btn btn-mini';
 				btn.href = "chart.html?id=" + data.data[noRows-i-1].id;
  				cell3.appendChild(btn);  
 	    		

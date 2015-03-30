@@ -26,8 +26,10 @@
 
 .btn-mini {
   background: url('../img/chart.png') no-repeat;
-  width: 32px; /* width of image */
-  height: 34px; /* height of image */
+  width: 35px; /* width of image */
+  height: 38px; /* height of image */
+  background-position: 1px;
+  border: 1px solid rgba(82, 128, 150, 0.61);
   display: block;
 }
 
@@ -68,30 +70,28 @@
     border: 1px solid #777;
     width:477px;
     height:190px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 #sensorlist {
 
 }
 
-/*
+
 
 ::-webkit-scrollbar-track-piece{
-  background-color:#fff;
   -webkit-border-radius:0;
 }
 ::-webkit-scrollbar{
-  width:25px;
+  width:4px;
   height:100%;
 }
+
 ::-webkit-scrollbar-thumb{
   height:50px;
   background-color:#999;
   -webkit-border-radius:4px;
-  outline:2px solid #fff;
-  outline-offset:-2px;
-  border: 2px solid #fff;
+  border: 2px solid rgb(70, 70, 70);
 }
 ::-webkit-scrollbar-thumb:hover{
   height:50px;
@@ -99,7 +99,6 @@
   -webkit-border-radius:4px;
 }
 
-*/
 
 body{
     -webkit-touch-callout: none;
