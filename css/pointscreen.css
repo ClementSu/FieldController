@@ -1,26 +1,33 @@
 
-.bottombar{
-  position: absolute;
-  top: 238px;
-}
 .BigTableElement{
   border: solid black 1px;
   width: 331px;
-  text-indent: 10px;
-  font-size: 20px;
+  text-align: center;
+  font-size: 25px;
 }
 .SmallTableElement{
   border: solid black 1px;
   width: 150px;
   text-indent: 15px;
-  font-size: 20px;
+  font-size: 23px;
 
 }
-.ChartButton {
+.btn-large {
+  float:left;
+  width: 330px;
+  padding: 0px 0px;
+  font-size: 25px;
+  /*background-color: rgba(52, 180, 197, 0.23);*/
+  background-color:rgba(196, 245, 198, 1);
+  cursor: none;
+  color: (54, 127, 230);
+  border: 1px solid rgba(82, 128, 150, 0.61);
+}
+
+.btn-mini {
   background: url('../img/chart.png') no-repeat;
   width: 32px; /* width of image */
-  height: 32px; /* height of image */
-  border: 0.5;
+  height: 34px; /* height of image */
   display: block;
 }
 
@@ -62,6 +69,10 @@
     width:477px;
     height:190px;
     overflow: hidden;
+}
+
+#sensorlist {
+
 }
 
 /*

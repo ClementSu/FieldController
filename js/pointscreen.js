@@ -17,7 +17,7 @@ function getData(){
 
 	    		var name = data.data[noRows-i-1].name;
 	    		if (data.data[noRows-i-1].detail == true) {
-	    			cell1.innerHTML = "<a href='detail.html?id=" + data.data[noRows-i-1].id + "'>" + name + "</a>";
+	    			cell1.innerHTML = "<a class='btn btn-large' href='detail.html?id=" + data.data[noRows-i-1].id + "'>" + name + "</a>";
 	    		} else {
 					cell1.innerHTML = name;
 	    		}
@@ -26,7 +26,7 @@ function getData(){
 	    		cell2.className = 'SmallTableElement';
 
 	    		var btn = document.createElement("a");
-				btn.className = 'ChartButton';
+				btn.className = 'btn-mini';
 				btn.href = "chart.html?id=" + data.data[noRows-i-1].id;
  				cell3.appendChild(btn);  
 	    		

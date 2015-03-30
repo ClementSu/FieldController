@@ -11,37 +11,48 @@ body {
 	}
 	
 .TitleBackground{
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(70, 70, 70);
   width: 100%;
 }
 .TitleWidth{
-  width: 250px;
+  width: 380px;
   text-indent: 10px;
-  color:black;
-  font-family: monospace;
+  color:white;
+  font-family: Georgia, Serif;
   font-size: xx-large;
 }
 
 .AlignRight {
  vertical-align: top;
- text-indent: 10px;
+ padding-right: 3px;
  font-size: 16px;
- color:black;
- padding-right: 5px;
- font-family: monospace;
- text-align:right;
+ color:white;
+ font-family: Verdana, Geneva, sans-serif;
+ text-indent:5px;
  width: 230px;
 }
 
 .AlignRight2 {
- vertical-align: top;
- text-indent: 10px;
+ padding-right: 3px;
  font-size: 16px;
- color:black;
- padding-right: 5px;
- font-family: monospace;
- text-align:right;
+ color:white;
+ font-family: Verdana, Geneva, sans-serif;
+ text-indent:14px;
  width: 230px;
+}
+
+.bottombar{
+  position: absolute;
+  top: 240px;
+}
+
+.btn-default {
+  background-color: rgba(196, 245, 198, 1);
+  border-color: rgba(97, 96, 96, 0.73);
+}
+
+.form-control {
+  border: 1px solid rgba(97, 96, 96, 0.73);
 }
 
 /* Disable text highlighting */
