@@ -63,5 +63,5 @@ function timerIncrement() {
 }
 
 $( document ).ready(function() {
-    startdatetime();
+   startdatetime();
 });

@@ -122,7 +122,8 @@ label_array = [];
 for (i = 0; i < numSamples; i++){
   data_array[i] = data.data[i];
 }
-var d = new Date();
+var now = new Date();
+var d = new Date(now.getTime() - o);
 
 
 
@@ -168,7 +169,8 @@ updateinterval = setInterval(function(){
 }
 
 function updateChart(data) {
-var d = new Date();
+var now = new Date();
+var d = new Date(now.getTime() - o);
 var min = d.getMinutes();
 if (min < 10)
 min = "0" + min.toString();

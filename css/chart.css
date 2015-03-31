@@ -8,6 +8,9 @@
   color: white;
   font-family: monospace;
 }
+.TitleWidth {
+  font-size: 20px !important;
+}
 .navbar{
   width: 56px;
   height: 56px;
