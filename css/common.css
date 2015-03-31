@@ -92,7 +92,6 @@ cursor: none !important;
 }
 }
 
-
 #home{
   width: 30px;
   height: 30px;
@@ -104,3 +103,12 @@ cursor: none !important;
   margin-right: 414px;
 }
 
+#back{
+  width:30px;
+  height:30px;
+  position: absolute;
+  left: 40px;
+  background: url('../img/back.png');
+  background-repeat: no-repeat;
+  float: left;
+}

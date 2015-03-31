@@ -46,16 +46,6 @@
   display: block;
 }
 
-#home{
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  background: url('../img/home.png');
-  background-repeat: no-repeat;
-  margin-left: 2px;
-  float: left;
-  margin-right: 414px;
-}
 
 #homelink{
   width: 30px;

@@ -22,17 +22,6 @@
     padding-top: 10px;
 }
 
-#home{
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  background: url('../img/home.png');
-  background-repeat: no-repeat;
-  margin-left: 2px;
-  float: left;
-  margin-right: 414px;
-}
-
 #lockbutton{
   width:30px;
   height:30px;
@@ -42,16 +31,6 @@
   background-repeat: no-repeat;
   float: left;
 
-}
-
-#back{
-  width:30px;
-  height:30px;
-  position: absolute;
-  left: 40px;
-  background: url('../img/back.png');
-  background-repeat: no-repeat;
-  float: left;
 }
 
 .sidebar-nav .navbar .navbar-collapse {
