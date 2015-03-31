@@ -68,15 +68,6 @@ body {
 
 
 /* tryin to follow this answer.... http://stackoverflow.com/questions/7063974/html-and-css-lock-screen-for-mobile-web-application  */
-div#lockscreen
-{
-width: 0;
-height: 0;
-position: fixed;
-top: 0;
-left: 0;
-display: none;
-}
 
 h1 {
     font-size: 28px !important;
@@ -99,5 +90,17 @@ cursor: none !important;
 *:visited {
 cursor: none !important;
 }
+}
+
+
+#home{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: url('../img/home.png');
+  background-repeat: no-repeat;
+  margin-left: 2px;
+  float: left;
+  margin-right: 414px;
 }
 
