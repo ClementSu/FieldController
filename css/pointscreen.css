@@ -15,13 +15,14 @@
 .btn-large {
   float:left;
   width: 330px;
+  height: 37px;
   padding: 0px 0px;
   font-size: 25px;
-  /*background-color: rgba(52, 180, 197, 0.23);*/
-  background-color:rgba(196, 245, 198, 1);
+  background-color: rgba(238, 244, 238, 1);
   cursor: none;
-  color: rgb(236, 69, 82);
-  border: 1px solid rgba(82, 128, 150, 0.61);
+  color: rgb(69, 135, 236);
+  border: 2px solid rgba(8, 13, 16, 0.61);
+  border-color: rgba(139, 139, 139, 1)
 }
 
 .btn-mini {
