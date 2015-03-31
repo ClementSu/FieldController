@@ -12,6 +12,7 @@
   font-size: 23px;
 
 }
+/*
 .btn-large {
   float:left;
   width: 330px;
@@ -23,13 +24,23 @@
   color: rgb(69, 135, 236);
   border: 2px solid rgba(8, 13, 16, 0.61);
   border-color: rgba(139, 139, 139, 1)
+}*/
+
+#chartbutton{
+  background: url('../img/chart.png') no-repeat;
+  background-position: 1px;
+}
+
+#sensorbutton {
+  background: url('../img/editsensor.png') no-repeat;
+  background-position: 1px;
+  background-position-y: 5px;
 }
 
 .btn-mini {
-  background: url('../img/chart.png') no-repeat;
+  
   width: 35px; /* width of image */
   height: 38px; /* height of image */
-  background-position: 1px;
   border: 1px solid rgba(82, 128, 150, 0.61);
   display: block;
 }

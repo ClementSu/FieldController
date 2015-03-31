@@ -1,6 +1,7 @@
 var loaded = false;
 var cell1;
-var cell2;
+var cell2
+var cell3;
 
 
 function getData(){
@@ -14,21 +15,31 @@ function getData(){
 	    		cell1 = row.insertCell(0);
 	    		cell2 = row.insertCell(1);
 	    		cell3 = row.insertCell(2);
+	    		cell4 = row.insertCell(3);
+
 
 	    		var name = data.data[noRows-i-1].name;
-	    		if (data.data[noRows-i-1].detail == true) {
+	    		/*if (data.data[noRows-i-1].detail == true) {
 	    			cell1.innerHTML = "<a class='btn btn-large' href='detail.html?id=" + data.data[noRows-i-1].id + "'>" + name + "</a>";
-	    		} else {
+	    		} else {*/
 					cell1.innerHTML = name;
-	    		}
+	    		//}
 	    		
 	    		cell1.className = 'BigTableElement';
 	    		cell2.className = 'SmallTableElement';
+	    		if (data.data[noRows-i-1].detail == true) {
+		    		var sensorbutton = document.createElement("a");
+		    		sensorbutton.className = 'btn btn-mini';
+		    		sensorbutton.id = 'sensorbutton';
+		    		sensorbutton.href = "detail.html?id=" + data.data[noRows-i-1].id;
+		    		cell3.appendChild(sensorbutton);
+		    	}
 
 	    		var btn = document.createElement("a");
 				btn.className = 'btn btn-mini';
+				btn.id = 'chartbutton'
 				btn.href = "chart.html?id=" + data.data[noRows-i-1].id;
- 				cell3.appendChild(btn);  
+ 				cell4.appendChild(btn);  
 	    		
 			}
 			loaded = true;
