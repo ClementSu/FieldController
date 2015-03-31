@@ -4,6 +4,15 @@ var cell2
 var cell3;
 
 
+
+$( document ).ready(function() {
+
+
+	$('#scroller').dragscrollable();
+	getData();
+
+});
+
 function getData(){
 	$.getJSON( "http://localhost:5000/objects/list/", function( data ) {
 		noRows = data.total;
@@ -35,12 +44,13 @@ function getData(){
 		    		cell3.appendChild(sensorbutton);
 		    	}
 
+		    	if (data.data[noRows-i-1].historic == true) {
 	    		var btn = document.createElement("a");
 				btn.className = 'btn btn-mini';
 				btn.id = 'chartbutton'
 				btn.href = "chart.html?id=" + data.data[noRows-i-1].id;
  				cell4.appendChild(btn);  
-	    		
+	    		}
 			}
 			loaded = true;
 		}
@@ -67,11 +77,3 @@ var updateScrollPos = function(e) {
 }
 
 
-
-$( document ).ready(function() {
-
-
-	$('#scroller').dragscrollable();
-	getData();
-
-});

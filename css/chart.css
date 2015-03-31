@@ -20,6 +20,11 @@
 #myChart{
     padding-left: 5px;
     padding-top: 10px;
+
+  width:475px !important;
+  height:184px !important;
+
+
 }
 
 #lockbutton{

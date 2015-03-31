@@ -1,10 +1,29 @@
+
+var o;
+
+function startdatetime() {
+    $.getJSON( "http://localhost:5000/device/datetime/get/", function( data ) {
+        val = data.datetime;
+        if (val == undefined || val == null) {
+            return;
+        }
+        hmid = new Date(val).getTime();
+        now = new Date().getTime();
+        o = now - hmid;
+        displayDate();
+        displayTime();
+    });
+}
+
 function displayDate(){
-var d = new Date();
+var now = new Date();
+var d = new Date(now.getTime() - o);
 document.getElementById("date").innerHTML = d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate();
 }
 
 function displayTime(){
-var d = new Date();
+var now = new Date();
+var d = new Date(now.getTime() - o);
 var min = d.getMinutes();
 if (min < 10)
 min = "0" + min.toString();
@@ -37,6 +56,12 @@ $(document).ready(function () {
 function timerIncrement() {
     timer = timer + 1;
     if (timer > 1) { // 1 minutes
-        window.location.replace("index.html");
+        if (window.location.pathname.indexOf('index.html') < 0) {
+            window.location.replace("index.html");
+        }
     }
 }
+
+$( document ).ready(function() {
+    startdatetime();
+});
