@@ -5,7 +5,7 @@ $(document).ready(function() {
     $.fn.editable.defaults.mode = 'inline';     
     
     //make time editable
-	$('#time').editable({
+	$('#timebar').editable({
     type: 'text',
     title: 'Enter time',
     success: function(response, newValue) {
@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 
 	
-    $('#date').editable({
+    $('#datebar').editable({
 	
 		success: function(response, newValue) 
 		{
