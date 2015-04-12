@@ -37,7 +37,10 @@ function validatePIN(pin) {	//check if PIN matches value stored in server
 	var resp = $.ajax({
         type: "GET",
         url: "http://localhost:5000/auth/verify/?pin=" + pin,
-        async: false
+        async: false,
+        error: function(XMLHttpRequest, textStatus, errorThrown) { 
+        	alert(errorThrown); 
+    	}     
     }).responseText;
     resp = JSON.parse(resp);
     return resp.success;
