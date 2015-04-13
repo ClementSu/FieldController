@@ -45,7 +45,6 @@ function validatePIN(pin) {	//check if PIN matches value stored in server
         error: function (XMLHttpRequest, textStatus, errorThrown){
         	if (errorThrown == "UNAUTHORIZED"){
         		alert('Incorrect PIN!');
-				e.preventDefault();
 				$('#PinForm').val("");
 				return;
         	} else {

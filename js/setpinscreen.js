@@ -19,7 +19,7 @@ $( document ).ready(function() {
 	$(".enter").mousedown(function(e) {
 	e.preventDefault();
 	if ($('#NewPinForm').val().length < 3) {
-		alert('PIN must be at least 3 digits');
+		alert('New PIN must be at least 3 digits');
 		return;
 	}
 	if ($('#NewPinForm').val() != $('#ConfirmPinForm').val())
@@ -28,7 +28,6 @@ $( document ).ready(function() {
 	return;
 	}
 	if (changePIN($('#PinForm').val(), $('#NewPinForm').val()) != true) {
-		alert('Incorrect Existing PIN!');
 		return;
 	} else {
 	
@@ -49,7 +48,21 @@ function changePIN(currentpin, newpin) {	//changes the stores PIN on the server
         type: "POST",
         url: "http://localhost:5000/auth/set/",
         async: false,
-        data: {cpin: currentpin, npin: newpin}
+        data: {cpin: currentpin, npin: newpin},
+
+        error: function (XMLHttpRequest, textStatus, errorThrown){
+        	if (errorThrown == "UNAUTHORIZED"){ //if wrong PIN
+        		alert('Incorrect PIN!');
+				$('#PinForm').val("");
+				$('#NewPinForm').val("");
+				$('#ConfirmPinForm').val("");
+				return false;
+        	} else { //else other errors ie. couldn't connect to the server
+        		alert("Error: Could not connect to field controller");
+        		return false;
+        	}	
+        },
+       
     }).responseText;
     resp = JSON.parse(resp);
     return resp.success;
