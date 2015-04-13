@@ -30,7 +30,7 @@ function delValue(){
 function submitValue(){
 		newval = formval;
 		$("#valuedisplay").text(newval + ' ' + units);
-		//$.post( , );
+		
 		$.ajax({
 		  type: "POST",
 		  url: "http://localhost:5000/objects/update/",

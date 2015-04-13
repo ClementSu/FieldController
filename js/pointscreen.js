@@ -14,8 +14,23 @@ $( document ).ready(function() {
 });
 
 function getData(){
-	$.getJSON( "http://localhost:5000/objects/list/", function( data ) {
-		noRows = data.total;
+	data = $.ajax({
+		  type: "GET",
+		  url: "http://localhost:5000/objects/list/",
+		  success: function(response){
+		        parseData(response);
+		  },
+		  error: function(XMLHttpRequest, textStatus, errorThrown) {
+		     alert("Error: Could not connect to field controller");
+		  }
+		});
+}
+	
+		
+
+
+function parseData(data){
+	noRows = data.total;
 
 		var table = document.getElementById("sensorlist");
 		if (loaded == false) {
@@ -62,10 +77,10 @@ function getData(){
 		    cells[1].innerHTML = value;		    	    	
 		}
 
-	  setTimeout(function () {
+
+	setTimeout(function () {
     	getData();
     }, 1000);
-	});
 }
 
 

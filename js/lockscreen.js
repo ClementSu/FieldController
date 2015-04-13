@@ -19,7 +19,8 @@ $(document).ready(function () {
 	
 	$(".enter").mousedown(function(e) {	//when enter is pressed, submit the PIN
 	e.preventDefault();
-	if (validatePIN($('#PinForm').val()) != true)
+	validatePIN($('#PinForm').val());
+	/*if (validatePIN($('#PinForm').val()) != true)
 	{
 	alert('Incorrect PIN!');
 	e.preventDefault();
@@ -27,7 +28,7 @@ $(document).ready(function () {
 	return;
 	} else {
 		window.location = "pointscreen.html";
-	}
+	}*/
 	});
 	
 
@@ -38,7 +39,20 @@ function validatePIN(pin) {	//check if PIN matches value stored in server
         type: "GET",
         url: "http://localhost:5000/auth/verify/?pin=" + pin,
         async: false,
+        success: function (){
+        	window.location = "pointscreen.html";
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown){
+        	if (errorThrown == "UNAUTHORIZED"){
+        		alert('Incorrect PIN!');
+				e.preventDefault();
+				$('#PinForm').val("");
+				return;
+        	} else {
+        		alert("Error: Could not connect to field controller");
+        	}
+        }
     }).responseText;
-    resp = JSON.parse(resp);
-    return resp.success;
+    //resp = JSON.parse(resp);
+    //return resp.success;
 }
