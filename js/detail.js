@@ -30,7 +30,18 @@ function delValue(){
 function submitValue(){
 		newval = formval;
 		$("#valuedisplay").text(newval + ' ' + units);
-		$.post( "http://localhost:5000/objects/update/", { id: getUrlParameter('id'), val: newval });
+		//$.post( , );
+		$.ajax({
+		  type: "POST",
+		  url: "http://localhost:5000/objects/update/",
+		  data: { id: getUrlParameter('id'), val: newval },
+		  success: function(msg){
+		        alert( "Sensor Value successfully changed" );
+		  },
+		  error: function(XMLHttpRequest, textStatus, errorThrown) {
+		     alert("Error: Could not connect with field controller");
+		  }
+		});
 }
 
 function resetForm(){
